@@ -1,0 +1,27 @@
+{
+  "name": "@shady/stealth",
+  "version": "0.1.0",
+  "description": "Stealth address generation & relay helpers for Shady on Solana.",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@solana/web3.js": "^1.95.0"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.4.0",
+    "@shady/sdk-core": "workspace:*"
+  }
+}
