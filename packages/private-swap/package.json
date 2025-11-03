@@ -1,0 +1,27 @@
+{
+  "name": "@shady/private-swap",
+  "version": "0.1.0",
+  "description": "Private Swap module for Raydium-based token swaps with privacy hooks.",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@solana/web3.js": "^1.95.0"
+  },
+  "dependencies": {
+    "@shady/zk-gate": "workspace:*",
+    "@shady/sdk-core": "workspace:*"
+  }
+}
