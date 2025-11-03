@@ -1,0 +1,17 @@
+{
+  "name": "shady-sdk-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "echo \"(optional) add eslint later\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "tsup": "^8.1.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.2"
+  }
+}
