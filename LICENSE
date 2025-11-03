@@ -1,0 +1,26 @@
+
+Commit.
+
+---
+
+## Step 10 — Per-package README (English)
+
+### 10.1 `@shady/sdk-core` README
+**Path:** `packages/sdk-core/README.md`
+
+```md
+# @shady/sdk-core
+
+Foundation utilities for the Shady SDK:
+- Minimal crypto helpers (ed25519 keypair, SHA-256 KDF)
+- Encoding utilities (hex ↔ bytes)
+- Simple browser storage wrapper
+- Typed error class
+
+> ⚠️ Crypto functions here are **placeholders** for prototypes. Replace with audited libs and align with Shady’s on-chain programs before production.
+
+## Install (workspace)
+This package is part of the monorepo. Consumers import from the workspace:
+```ts
+import { Crypto, toHex } from "@shady/sdk-core";
+
